@@ -264,7 +264,7 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
 				try {
 					socket = new Socket(host, port);
 				    socketOutput = socket.getOutputStream();
-					PrintWriter pw = new PrintWriter(socketOutput);			
+					//PrintWriter pw = new PrintWriter(socketOutput);			
 					
 				} catch (IOException e) {
 					e.printStackTrace();
