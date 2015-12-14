@@ -107,7 +107,7 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
         });    
         senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+        senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_FASTEST);
     }
     
 	@Override
@@ -202,7 +202,7 @@ public class MainActivity extends ActionBarActivity implements SensorEventListen
 	
 	protected void onResume() {
 	    super.onResume();
-	    senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+	    senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_FASTEST);
 	}
 	
 	class UDPClientTask extends AsyncTask<String, Void, String>{
